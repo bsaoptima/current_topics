@@ -1,0 +1,459 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Quantum Path Integrals· Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+
+        .section-image{
+            max-width:500px;
+            max-height:800px;
+        }
+
+        .section-image-padding{
+            padding: 40px;
+        }
+
+        .responsive-image-container{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .response-image{
+            width:100%;
+            max-height: 400px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (min-width: 768px){
+            .response-image {
+                max-height: 500px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .response-image {
+                max-height: 500px;
+            }
+        }
+
+        .carousel-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            .carousel-container .carousel-item img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+        }
+
+        .carousel-control-prev {
+            left: -30px;
+        }
+
+        .carousel-control-next {
+            right: -30px;
+        }
+
+        .top-section {
+            background-color: #330033;
+        }
+
+        .colored {
+            filter: hue-rotate(90deg);
+        }
+
+        body {
+            background-color: #330033;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1.9'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='6'/%3E%3Ccircle cx='539' cy='269' r='6'/%3E%3Ccircle cx='603' cy='493' r='6'/%3E%3Ccircle cx='731' cy='737' r='6'/%3E%3Ccircle cx='520' cy='660' r='6'/%3E%3Ccircle cx='309' cy='538' r='6'/%3E%3Ccircle cx='295' cy='764' r='6'/%3E%3Ccircle cx='40' cy='599' r='6'/%3E%3Ccircle cx='102' cy='382' r='6'/%3E%3Ccircle cx='127' cy='80' r='6'/%3E%3Ccircle cx='370' cy='105' r='6'/%3E%3Ccircle cx='578' cy='42' r='6'/%3E%3Ccircle cx='237' cy='261' r='6'/%3E%3Ccircle cx='390' cy='382' r='6'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container-posters-text {
+            text-align: center;
+            color: white;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .col-lg-6.col-md-6.col-sm-12 img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .col-sm-12 img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <main>
+
+        <section class="py-5 text-center container top-section">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light" style="color:white;">Quantum Path Integrals</h1>
+                    <p style="color:whitesmoke;">
+                        Introduced in 1933 by Dirac, who speculated on the role that the action plays in quantum mechanics and properly formulated by Feynman in 1948, Path Integrals are now a third formulation
+                        of quantum mechanics. In essence they describe how all paths a particle can take contribute to the propagator describing the journey from a point to another. From field theory to statistical
+                        physics, they have turned out to be a useful technique to describe systems by providing a surprisingly intuitive way of viewing quantum mechanics.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#alex_text">
+                                <img class="card-img-top" src="images/alex_2.PNG" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Linking number weighted paths.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Alexander HARDMAN</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#linus_text">
+                                <img class="card-img-top" src="https://www.researchgate.net/publication/51949819/figure/fig1/AS:698359161561089@1543513207981/Schematic-illustration-of-the-worm-algorithm.png" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Polarons and Coupled Systems</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#worms" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Linus ALIANI</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#stef_text">
+                                <img class="card-img-top" src="https://www.researchgate.net/publication/51949819/figure/fig1/AS:698359161561089@1543513207981/Schematic-illustration-of-the-worm-algorithm.png" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Path Integral Worm Algorithms.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="posters/stefan.pdf" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Bogdan AGRICI</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#dylan_text">
+                                <img class="card-img-top" src="images/dylan_1.PNG" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Instantons</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="posters/dylan.pdf" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Dylan NAYLOR</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#zak_text">
+                                <img class="card-img-top" src="images/zak_1.png" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Ideal Polymer Chains</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="posters/zak.pdf" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Zak</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="#fynn_text">
+                                <img class="card-img-top" src="images/fynn_1.jpeg" alt="Linking number weighted paths" width="100%" height="225">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Path Integrals in Quantum Field Theory</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="posters/fynn.pdf" class="btn btn-sm btn-outline-secondary">View Poster</a>
+                                    </div>
+                                    <small class="text-muted">Finnian CUNNINGHAM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2 style="color:white;">Introduction to Quantum Path Integrals</h2>
+                <p style="color:white;">Introduced in 1933 by Dirac, who speculated on the role that the action plays in quantum mechanics and properly formulated by Feynman in 1948, Path Integrals are now a third formulation of quantum mechanics. In essence they describe how all paths a particle can take contribute to the propagator describing the journey from a point to another. From field theory to statistical physics, they have turned out to be a useful technique to describe systems by providing a surprisingly intuitive way of viewing quantum mechanics.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="section-image response-image section-image-padding" src="images/image.png" alt="Your Image" style="padding: 40px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-2 order-sm-1">
+                <img class="section-image response-image section-image-padding" id="linking-number" src="images/alex_1.png" alt="Your Image" style="padding: 40px;">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-1 order-sm-2" id="alex_text">
+                <h2 style="color:white;">Linking Number Weighted Paths</h2>
+                <p style="color:white;">Linking number weighted paths are an important concept in path integration and can be used to explain the Aharonov-Bohm effect and polymer entanglement. </p>
+                <p style="color:white;">The Aharonov-Bohm effect describes the behaviour of a charged particle moving around a magnetic field. However in regions where the field is zero and should have no effect on the particle, it still does. We know that there has been an effect on the particle as it’s phase has been shifted. Particles can behave like waves and phase simply refers to where a wave is in its cycle.   </p>
+                <p style="color:white;">The phase shift is determined by something called linking number. This number is how many times the particle ‘crosses’ the magnetic field lines. The paths are then weighted by their linking number.  </p>
+                <p style="color:white;">To understand the concept of weighting a path, imagine that you are trying to find the probability of the particle arriving at a certain point after it has taken different paths. One way to do this is to add up the probability amplitudes of all the paths leading to the point, but some paths will contribute more to the probability than others. This is because those with complete opposite phase will cancel with each other while other will increase as they are perfectly in sync, when adding the probabilities up.   </p>
+                <p style="color:white;">To account for this, we can "weight" each path by its linking number. Paths with a higher linking number are given a larger weight, while paths with a lower linking number are given a smaller weight. This allows us to properly find the probability of the particle moving from one position to another in this system.  </p>
+                <p style="color:white;">A similar application is that of polymer entanglement, it has the same basic concept that each path is weighted by the linking number, only this time it’s the linking number between different polymer chains. These chains can become knotted and entangled leading to a significant change in their physical properties, by using path integration we can quantify the degree of entanglement and thereby explain these changes.   </p>           
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12" id="linus_text">
+                <h2 style="color:white;">Polarons and Coupled Systems</h2>
+                <p style="color:white;">If an electron moves through a polar lattice structure it distorts it by a small amount leading to a local oscillation of the lattice sites and the build up of an electric field caused by local polarisation. The polarisation gives the effect its name: Polaron. The reason for the special name the electron has while moving through the lattice site is what was originally coined “dressing”: Moving through the lattice oscillations caused by the electron swarm around it as phonons and alter its characteristics such as effective mass and mobility. </p>
+                <p style="color:white;">Polarons started to be in the spotlight of research in the 1930s(L. Landau, “Uber die Bewegung der Elektronen im Kristallgitter,” Phys. Z. Soviet. 3, 664 (1933).) Various papers followed with most of them predicting results which did only match the experiments in limiting cases ( mentioned in: TD Schultz, “Slow Electrons in Crystals: Self Energy, Mass and Mobility“, Phys. Rev. Lett. 116,3,(1959)). Only in the 1950s better solutions were found using path integrals showing off the capabilities of their application functioning mostly as a proof of concept.</p>
+                <p style="color:white;">It is a well suited model to show off the capabilities of path integration because it can be modelled as a simplified particle interacting with a field causing harmonic oscillations around itself. From this description it comes to no surprise that path integration which has been developed partially to explain the interaction of charges with the electromagnetic field would also perform well for the polaron problem.</p>
+                <p style="color:white;">But additionally to its educational value the polaron has made a reappearance in research over the past 20 years with many research papers written on their behaviour in lattice structures where they are used in research concerning photovoltaic cells (Hui Zhang and Nam-Gyu Park J. Phys. Energy 5 024002, (2023)). Parallel to this development the polaron also made its appearance in disguise. Some problems in condensed matter physics show behaviour which is similar to that of polarons allowing the model to be “recycled” for other problems (A. O. Badrutdinov, “Unidirectional Charge Transport via Ripplonic Polarons in a Three-Terminal Microchannel Device”, Phys. Rev. Lett. 124, 126803 (2020)). The above hopefully can persuade the reader of the dual use of the polaron problem as a textbook-example and also interesting area of current research. </p>
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="section-image response-image section-image-padding" id="polarons" src="images/image.png" alt="Your Image" style="padding: 40px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-2 order-md-1">
+                <img class="section-image response-image section-image-padding" id="worms" src="images/stef_2.png" alt="Your Image" style="padding: 40px;">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-1 order-md-2" id="stef_text">
+                <h2 style="color:white;">Path Integral Worm Algorithms</h2>
+                <p style="color:white;">Worm algorithms are a powerful tool in the field of computational physics for studying quantum systems. They are commonly used in the context of quantum path integrals, which are a mathematical technique used to calculate the probability of a quantum particle moving from one point to another.</p>
+                <p style="color:white;">The basic idea behind worm algorithms is to simulate the behavior of a quantum particle by breaking down its path into smaller, discrete steps. These steps are then used to create a “worm” that can move forward or backward along the path. By manipulating the worm, physicists can calculate various properties of the system, such as the energy or momentum.</p>
+                <p style="color:white;">Worm algorithms are particularly useful for studying complex quantum systems, such as those with many interacting particles. They can also be used to explore the behavior of materials under extreme conditions, such as high pressure or low temperature.</p>
+                <p style="color:white;">Overall, worm algorithms offer a powerful tool for exploring the behavior of quantum systems and are a valuable addition to the computational physicist`s toolkit.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12" id="dylan_text">
+                <h2 style="color:white;">Instantons</h2>
+                <p style="color:white; ">Feynman’s path-integral method can be manipulated by considering ‘imaginary time’. All this means is that we substitute t in our equations, for -iT. This is known as a ‘Wick rotation’ as it can be thought of as a rotation by π/2 in the complex plane. When we do this, the potential energy term also flips to -V.</p>
+                <p style="color:white;">This method allows us to find the mathematical description of instantons. They are solutions to the corresponding classical equations of motion but using imaginary time.</p>
+                <p style="color:white;">Instantons are the quantum field equivalent to tunnelling, where a field ‘tunnels’ from one configuration to another even if it classically lacks enough energy. There are certain arrangements of fields that correspond to energy minima, which are separated by potential energy barriers. They can be imagined as ‘hills’ separating ‘valleys’.</p>
+                <p style="color:white;">So, to change from one to another, the field would need to the energy to travel over the ‘hill’. Therefore, it shouldn’t be possible for a field to travel from one to another, but they do, and this is tunnelling. In quantum fields, this is known as ‘Instantons’, named because they describe how the field ‘instantly’ jumps between states.</p>
+                <p style="color:white;">They are found in the Yang-Mills theory which explains the unification of electromagnetic, strong, and weak forces.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="section-image response-image section-image-padding" id="instantons" src="images/dylan_1.png" alt="Your Image" style="padding: 40px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-2 order-md-1">
+                <img class="section-image response-image section-image-padding" id="zak" src="images/zak_1.png" alt="Your Image" style="padding: 40px;">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 order-1 order-md-2" id="zak_text">
+                <h2 style="color:white;">Ideal Polymer Chains</h2>
+                <p style="color:white;">Path integrals have a natural application to polymer problems as the path is exactly the polymer. As a result, the mathematics of summing up all possible paths can be more intuitively understood. The ideal polymer chain is a path of fixed length containing N monomers of a set length l. This is simpler than free particle path integral problems, where all possible paths of any length must be considered.</p>
+                <p style="color:white;">The simplest approach to polymer problems is the random walk model. Each monomer is able to rotate freely in space relative to the previous one, with no preference for any orientation. Therefore the vector end to end distance can be calculated via a 3D random walk.</p>
+                <p style="color:white;">Imagine tracing the path of a particle that is moving in random directions through 3D space. It will make N changes of direction, and will travel a distance l every turn. This route will be one of many possible configurations for the polymer, with the most probable configuration being the path of least action.</p>
+                <p style="color:white;">The distribution function for the end-to-end distance is expressed by a path integral, from which the average and median values are found.</p>
+                <p style="color:white;">The position of a polymer will also be affected by spatial obstructions, such as dust and walls. The model can be amended to include these obstructions, by adding terms to the Lagrangian according to the nature of the obstruction. </p>
+                <p style="color:white;">For interactions within the polymer itself, each monomer is modeled as a small hard sphere. The volume described by this sphere is then forbidden for all other monomers. The challenge of calculating the sum of these non-interacting configurations is called the ‘excluded volume’ problem, and is unsolved.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12" id="fynn_text">
+                <h2 style="color:white;">Path Integrals in Quantum Field Theory</h2>
+                <p style="color:white;">Introduced in 1933 by Dirac, who speculated on the role that the action plays in quantum mechanics and properly formulated by Feynman in 1948, Path Integrals are now a third formulation of quantum mechanics. In essence they describe how all paths a particle can take contribute to the propagator describing the journey from a point to another. From field theory to statistical physics, they have turned out to be a useful technique to describe systems by providing a surprisingly intuitive way of viewing quantum mechanics.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="section-image response-image section-image-padding" id="fynn" src="images/fynn_2.jpeg" alt="Your Image" style="padding: 40px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-posters-text">
+        <h3 style="color:white;">If you want to learn more on each of these topics:</h3>
+        <p style="color:white;">Click on one of these to get the full poster with detailed information!</p> 
+    </div>
+
+    <div class="carousel-container">
+        <div id="pdfCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/stef_preview.jpg" class="d-block w-100" alt="Poster Preview 1" data-pdf-url="posters/stefan.pdf">
+                </div>
+                <div class="item">
+                    <img src="images/fynn_preview.PNG" class="d-block w-100" alt="Poster Preview 2" data-pdf-url="posters/fynn.pdf">
+                </div>
+                <div class="item">
+                    <img src="images/dylan_preview.jpg" class="d-block w-100" alt="Poster Preview 2" data-pdf-url="posters/dylan.pdf">
+                </div>
+                <div class="item">
+                    <img src="images/zak_preview.jpg" class="d-block w-100" alt="Poster Preview 2" data-pdf-url="posters/zak.pdf">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#pdfCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#pdfCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var carouselImages = document.querySelectorAll("#pdfCarousel .item img");
+
+        carouselImages.forEach(function (img) {
+        img.addEventListener("click", function () {
+        var pdfUrl = img.getAttribute("data-pdf-url");
+        window.open(pdfUrl, "_blank");
+        });
+        });
+        });
+    </script>
+
+
+    <footer class="text-muted py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1" style="color:white;">This website showcases our work on Quantum Path Integrals.</p>
+            <p class="mb-0" style="color:white;">We present multiple topics where they are used.</p>
+        </div>
+    </footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
